@@ -1,12 +1,9 @@
-'use client'
-
 import { ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
 }
 
-export const Container = ({}: Props) => {
-  //code
-  return <div>container</div>
+export const Container = ({ children }: Props) => {
+  return <div className="mx-auto max-w-7xl">{children}</div>
 }
