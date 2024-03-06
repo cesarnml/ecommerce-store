@@ -2,15 +2,11 @@
 
 import { Container } from '@/components/ui/container'
 import { useCart } from '@/hooks/user-cart'
-import { ReactNode, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CartItem } from './components/cart-item'
 import Summary from './components/summary'
 
-type Props = {
-  children: ReactNode
-}
-
-export default function CartPage({ children }: Props) {
+export default function CartPage() {
   const [isMounted, setIsMounted] = useState(false)
   const cart = useCart()
 
