@@ -4,16 +4,14 @@ import getProducts from '@/actions/get-products'
 import getSizes from '@/actions/get-sizes'
 import { Billboard } from '@/components/billboard'
 import { Container } from '@/components/ui/container'
-import { ReactNode } from 'react'
-import { Filter } from './components/filter'
 import { NoResults } from '@/components/ui/no-results'
 import { ProductCard } from '@/components/ui/product-card'
+import { Filter } from './components/filter'
 import { MobileFilters } from './components/mobile-filters'
 
 export const revalidate = 0
 
 type Props = {
-  children: ReactNode
   params: {
     categoryId: string
   }
@@ -23,7 +21,7 @@ type Props = {
   }
 }
 
-export default async function CategoryPage({ children, params, searchParams }: Props) {
+export default async function CategoryPage({ params, searchParams }: Props) {
   const products = await getProducts({
     categoryId: params.categoryId,
     colorId: searchParams.colorId,
