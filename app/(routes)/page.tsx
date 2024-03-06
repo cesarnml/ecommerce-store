@@ -7,11 +7,7 @@ import { ReactNode } from 'react'
 
 export const revalidate = 0
 
-type Props = {
-  children: ReactNode
-}
-
-export default async function HomePage({ children }: Props) {
+export default async function HomePage() {
   const products = await getProducts({ isFeatured: true })
   const billboard = await getBillboard('6fca7e17-35ec-46f4-9c30-7d08ff6e25b1')
   return (
