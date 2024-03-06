@@ -7,6 +7,7 @@ import { toast } from 'react-hot-toast'
 import { useCart } from '@/hooks/user-cart'
 import { Currency } from '@/components/ui/currency'
 import { Button } from '@/components/ui/button'
+import axios from 'axios'
 
 const Summary = () => {
   const searchParams = useSearchParams()
@@ -29,12 +30,15 @@ const Summary = () => {
   }, 0)
 
   const onCheckout = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      method: 'POST',
-      body: JSON.stringify({ productIds: items.map((item) => item.id) }),
-    })
+    try {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+        productIds: items.map((item) => item.id),
+      })
 
-    window.location = (await response.json()).url
+      window.location = response.data.url
+    } catch (error) {
+      console.error('error:', error)
+    }
   }
 
   return (
