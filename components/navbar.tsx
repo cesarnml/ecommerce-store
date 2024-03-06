@@ -2,6 +2,7 @@ import getCategories from '@/actions/get-categories'
 import { MainNav } from '@/components/main-nav'
 import { Container } from '@/components/ui/container'
 import Link from 'next/link'
+import { NavbarActions } from './navbar-actions'
 
 type Props = {}
 
@@ -16,6 +17,7 @@ export const Navbar = async ({}: Props) => {
             <p className="font-bold text-xl uppercase">Store</p>
           </Link>
           <MainNav data={categories} />
+          <NavbarActions />
         </div>
       </Container>
     </div>
