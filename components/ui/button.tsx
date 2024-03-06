@@ -10,6 +10,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonHTMLAttributes<HTMLBut
           className,
         )}
         ref={ref}
+        {...props}
       >
         {children}
       </button>

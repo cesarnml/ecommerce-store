@@ -20,7 +20,7 @@
 - [x] ~~_Orders Entity (Admin)_~~ [2024-03-05]
 - [x] ~~_Environment setup & featured products (Store)_~~ [2024-03-06]
 - [x] ~~_Individual product screen (Store)_~~ [2024-03-06]
-- [ ] Individual category screen (Store)
+- [x] ~~_Individual category screen (Store)_~~ [2024-03-06]
 - [ ] Product preview modal components (Store)
 - [ ] Add to Cart functionality (Store)
 - [ ] Stripe Setup & Checkout finalization (Admin, Store)
