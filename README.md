@@ -22,7 +22,7 @@
 - [x] ~~_Individual product screen (Store)_~~ [2024-03-06]
 - [x] ~~_Individual category screen (Store)_~~ [2024-03-06]
 - [x] ~~_Product preview modal components (Store)_~~ [2024-03-06]
-- [ ] Add to Cart functionality (Store)
+- [x] ~~_Add to Cart functionality (Store)_~~ [2024-03-06]
 - [ ] Stripe Setup & Checkout finalization (Admin, Store)
 - [ ] Dashboard page (Admin)
 - [ ] Dark Mode (Admin)
